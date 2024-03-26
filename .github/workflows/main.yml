@@ -18,11 +18,6 @@ jobs:
       # les test unitaire
       - name: run unit test
         run: npm run test
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: production-files
-          path: ./dist
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
